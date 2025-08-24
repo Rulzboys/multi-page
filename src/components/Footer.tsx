@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">J</span>
+                <span className="text-primary-foreground font-bold text-lg">PG</span>
               </div>
-              <span className="font-bold text-xl gradient-text">JelajahHalaman</span>
+              <span className="font-bold text-xl gradient-text">PaluGada</span>
             </div>
             <p className="text-muted-foreground">
               Solusi web modern untuk mengembangkan bisnis Anda ke level berikutnya.
@@ -85,7 +85,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2 text-muted-foreground">
                 <MapPin size={16} className="mt-1" />
-                <span>Jakarta, Indonesia</span>
+                <span>Karawang, Indonesia</span>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="border-t pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 JelajahHalaman. All rights reserved.
+              © 2025 PaluGada. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link to="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">

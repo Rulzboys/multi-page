@@ -55,7 +55,7 @@ const Index = () => {
           <div className="text-center max-w-4xl mx-auto animate-fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-scale-in">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium">Platform Web Modern #1 di Indonesia</span>
+              <span className="text-sm font-medium">Platform Web Modern di Indonesia</span>
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -104,7 +104,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Mengapa Memilih <span className="gradient-text">JelajahHalaman</span>?
+              Mengapa Memilih <span className="gradient-text">PaluGada</span>?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Kami menyediakan solusi lengkap untuk kebutuhan digital bisnis Anda
