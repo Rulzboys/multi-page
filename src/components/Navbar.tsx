@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Beranda', path: '/' },
-    { name: 'Tentang', path: '/about' },
-    { name: 'Layanan', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Kontak', path: '/contact' },
+    { name: "Beranda", path: "/" },
+    { name: "Tentang", path: "/about" },
+    { name: "Layanan", path: "/services" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Kontak", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -24,9 +24,11 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">J</span>
+              <span className="text-primary-foreground font-bold text-lg">
+                PG
+              </span>
             </div>
-            <span className="font-bold text-xl gradient-text">JelajahHalaman</span>
+            <span className="font-bold text-xl gradient-text">PaluGada</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -36,7 +38,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? 'text-primary' : 'text-muted-foreground'
+                  isActive(link.path) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {link.name}
@@ -44,11 +46,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-              Mulai Sekarang
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+                Mulai Sekarang
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,15 +75,18 @@ const Navbar = () => {
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`block py-3 font-medium transition-colors hover:text-primary ${
-                  isActive(link.path) ? 'text-primary' : 'text-muted-foreground'
+                  isActive(link.path) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-              Mulai Sekarang
-            </Button>
+            {/* CTA Button - Mobile */}
+            <Link to="/contact" onClick={() => setIsOpen(false)}>
+              <Button className="w-full mt-4 bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+                Mulai Sekarang
+              </Button>
+            </Link>
           </div>
         </div>
       )}
